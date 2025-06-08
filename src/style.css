@@ -1,0 +1,141 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  
+  background: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#sphere {
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.tile {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  will-change: transform, opacity;
+  pointer-events: auto;
+ 
+  transition: filter 0.3s ease;
+ 
+}
+
+
+#background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+#tvNoiseBtn {
+  position: relative;
+  padding: 15px 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #a0c4ff;
+  background: #111;
+  border: 3px solid #5c7cfa;
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  box-shadow:
+    0 0 10px #5c7cfa,
+    inset 0 0 8px #5c7cfa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+
+}
+
+
+
+#introScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+}
+
+
+#introVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: grayscale(0.7) contrast(0.8);
+}
+
+
+
+
+
+
+
+
+#startBtn {
+  position: relative;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #a0c4ff;
+  background: #111;
+  border: 3px solid #5c7cfa;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow:
+    0 0 10px #5c7cfa,
+    inset 0 0 8px #5c7cfa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+#startBtn:hover {
+  background-color: #5c7cfa;
+  color: #111;
+  box-shadow:
+    0 0 20px #5c7cfa,
+    inset 0 0 12px #5c7cfa;
+}

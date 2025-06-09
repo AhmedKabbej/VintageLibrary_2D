@@ -7,7 +7,7 @@ class SphereGallery {
     sphereId = "sphere",
     imageCount = 150,
     radius = 350,
-    imagePattern = "/image", // base url + numéro + extension
+    imagePattern = "/image", // ceux dans public
     imageExtension = ".jpg",
     btnId = "tvNoiseBtn",
     soundId = "sound1",
@@ -223,5 +223,4 @@ class SphereGallery {
   }
 }
 
-// Instanciation de la classe (à faire dans ton fichier principal ou script)
 const gallery = new SphereGallery();
